@@ -1,30 +1,28 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Client.Models;
 
 public class Product
 {
-    public int ProductId { get; set; }
-
-    [Required]
-    [StringLength(80)]
+    [JsonPropertyName("name")]
     public string Name { get; set; }
-
-    [Required]
-    [StringLength(300)]
+    
+    [JsonPropertyName("description")]
     public string Description { get; set; }
     
-    [Required]
+    [JsonPropertyName("price")]
     public decimal Price { get; set; }
-
-    [Required]
-    [StringLength(300)]
+    
+    [JsonPropertyName("imageUrl")]
     public string ImageUrl { get; set; }
 
     public float Stock { get; set; }
-    public DateTime RegisterDate { get; set; }
+    
+    [JsonPropertyName("registerDate")]
+    public string RegisterDate { get; set; }
 
 
-    public Category Category { get; set; }
-    public int CategoryId { get; set; }
+    // public Category Category { get; set; }
+    // public int CategoryId { get; set; }
 }
