@@ -18,5 +18,5 @@ public class Category
 
     [Required] [MaxLength(80)] public string ImageUrl { get; set; }
 
-    public ICollection<Product> Products { get; set; }
+    public IList<Product> Products { get; set; }
 }

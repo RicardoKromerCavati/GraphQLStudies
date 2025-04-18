@@ -4,7 +4,7 @@ namespace GraphQLSample.Entities;
 
 public class Product
 {
-    public int ProductId { get; set; }
+    public int Id { get; set; }
 
     [Required]
     [StringLength(80)]
@@ -25,6 +25,6 @@ public class Product
     public DateTime RegisterDate { get; set; }
 
 
-    public Category Category { get; set; }
-    public int CategoryId { get; set; }
+    // public Category Category { get; set; }
+    // public int CategoryId { get; set; }
 }

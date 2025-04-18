@@ -10,5 +10,6 @@ public sealed class CategoryType : ObjectGraphType<Category>
         Field(x => x.Id, type: typeof(IdGraphType)).Description("Category ID");
         Field(x => x.Name).Description("Category Name");
         Field(x => x.ImageUrl).Description("Category Image URL");
+        Field(x => x.Products, typeof(ListGraphType<ProductType>)).Description("List of products");
     }
 }
